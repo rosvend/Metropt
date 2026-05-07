@@ -23,3 +23,9 @@ def gen(i,j,t): #Distribución de probabilidad de personas
 def expected_population(x, y, t, grid_size=20):
     rate = np.sin(2 * np.pi * x / grid_size) * np.sin(2 * np.pi * y / grid_size) * 2 + 2
     return rate * t
+
+def expected_population_field(grid_size, t):
+    coords = np.arange(grid_size)
+    X, Y = np.meshgrid(coords, coords, indexing='xy')
+    rate = np.sin(2 * np.pi * X / grid_size) * np.sin(2 * np.pi * Y / grid_size) * 2 + 2
+    return rate * t
