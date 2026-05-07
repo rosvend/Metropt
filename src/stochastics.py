@@ -21,5 +21,5 @@ def gen(i,j,t): #Distribución de probabilidad de personas
   return n
 
 def expected_population(x, y, t, grid_size=20):
-    rate = np.sin(2 * np.pi * x / grid_size) * np.sin(2 * np.pi * y / 15) * 2 + 2
+    rate = np.sin(2 * np.pi * x / grid_size) * np.sin(2 * np.pi * y / grid_size) * 2 + 2
     return rate * t

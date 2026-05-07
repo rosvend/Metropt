@@ -1,6 +1,6 @@
 import numpy as np
 from grid import Grid
-from transit import prob_node, nearest_station
+from transit import weight_node, nearest_station
 
 def calculate_expected_cost(grid_instance, time, stations):
     total_expected_cost = 0
@@ -10,7 +10,7 @@ def calculate_expected_cost(grid_instance, time, stations):
     for origin in nodes:
         for destination in nodes:
             #trip probability
-            prob = prob_node(origin, destination, time)
+            prob = weight_node(origin, destination, time)
             
             # find nearest stations for O and D
             station_o = nearest_station(grid_instance, origin, stations)

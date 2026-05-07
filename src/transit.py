@@ -1,7 +1,7 @@
 import numpy as np 
 from stochastics import expected_population
 
-def prob_node(origin, destination,time):
+def weight_node(origin, destination,time):
     mass_o = expected_population(origin[0],origin[1],time)
     mass_d = expected_population(destination[0],destination[1],time)
     return mass_o * mass_d
